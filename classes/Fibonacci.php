@@ -2,14 +2,16 @@
 
 namespace Math;
 
-class Fibonacci {
+class Fibonacci
+{
 
     /**
      * Returns the sequence number from Fibonacci
      * @param $number
      * @return int|mixed|string
      */
-    public function getElementByNumber($number) {
+    public function getElementByNumber($number)
+    {
         if ( ! $this->validateNumber($number)) {
             return "Invalid number passed: $number";
         }
@@ -35,7 +37,8 @@ class Fibonacci {
      * Returns default Fibonacci range
      * @return int[]
      */
-    private function getDefaultRange(): array {
+    private function getDefaultRange(): array
+    {
         return array(1, 1);
     }
 
@@ -44,7 +47,8 @@ class Fibonacci {
      * @param $number
      * @return bool
      */
-    private function validateNumber($number): bool {
+    private function validateNumber($number): bool
+    {
         return is_int($number) && ($number > 0);
     }
 

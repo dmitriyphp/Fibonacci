@@ -2,13 +2,14 @@
 
 namespace Input;
 
-class Request {
-
+class Request
+{
     /**
      * Returns request parameter
      * @return int
      */
-    public function get(): int {
+    public function get(): int
+    {
         if ($this->isCli()) {
             $result = $this->getCliArg();
         } else {
@@ -21,7 +22,8 @@ class Request {
      * Returns request parameter from URL
      * @return mixed|null
      */
-    private function getUrlArg() {
+    private function getUrlArg()
+    {
         if (isset($_GET['n'])) {
             return $_GET['n'];
         } elseif (isset($_POST['n'])) {
@@ -34,7 +36,8 @@ class Request {
      * Returns request parameter from console
      * @return false|mixed|string|null
      */
-    private function getCliArg() {
+    private function getCliArg()
+    {
         $arg = getopt('n:');
         return $arg['n'] ?? null;
     }
@@ -43,8 +46,8 @@ class Request {
      * Checks if current mode is console
      * @return bool
      */
-    private function isCli(): bool {
+    private function isCli(): bool
+    {
         return php_sapi_name() == 'cli';
     }
-
 }
