@@ -1,0 +1,1 @@
+{"version":1,"defects":{"FibonacciTest::test_get_2_number_of_fibonacci":3,"FibonacciTest::test_get_0_number_of_fibonacci":3},"times":{"FibonacciTest::test_get_2_number_of_fibonacci":0.012,"FibonacciTest::test_get_6_number_of_fibonacci":0.001,"FibonacciTest::test_get_0_number_of_fibonacci":0.001}}
